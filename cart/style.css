@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", serif;
+}
+
+/**  **/
+.top {
+    background-color: powderblue;
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home i {
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    width: 600px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.search-icon i {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+
+
+/**  **/
+.container {
+    width: 900px;
+    height: 670px;
+    background-color: #187065;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.product-item {
+    width: 32%;
+    height: 49%;
+    background-color: thistle;
+}
+
+.image-div {
+    position: relative;
+}
+
+.image-div img {
+    width: 80%;
+    height: 230px;
+    margin-left: 28px;
+    
+}
+
+.image-div span {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding-top: 2px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: palegreen;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.detail-div {
+    margin-left: 30px;
+}
+
+.detail-div p {
+    margin: 3px 0;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount-price p {
+    font-weight: 700;
+}
