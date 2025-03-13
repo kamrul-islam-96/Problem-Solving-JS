@@ -55,37 +55,3 @@ function decreaceCount () {
 function clearNotice () {
     notice.innerHTML = '';
 }
-
-
-
-var count = document.getElementById ('count');
-var increaseDecreaceCount = Number (count.innerHTML);
-var notice = document.getElementById ('notice');
-
-
-function increaceCount () {
-    if (increaseDecreaceCount === 5) {
-        notice.innerHTML = 'You can not purchase more than 5 items'
-        setTimeout (clearNotice, 2000)
-        return;
-    }
-    count.innerHTML = increaseDecreaceCount;
-    increaseDecreaceCount++;
-    clearNotice ();
-}
-
-function decreaceCount () {
-    if (increaseDecreaceCount === 1) {
-        notice.innerHTML = 'cart item can not be less than one'
-        setTimeout (clearNotice, 2000)
-        return;
-    }
-    count.innerHTML = increaseDecreaceCount;
-    increaseDecreaceCount--;
-    clearNotice ();
-}
-
-
-function clearNotice () {
-    notice.innerHTML = "";
-}

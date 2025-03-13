@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/** navbar **/
+.nav-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    gap: 20px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-bars {
+    font-size: 20px;
+}
+
+#count {
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.479);
+}
+
+.main h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/** input **/
+.input-box {
+    width: 90%;
+    height: 50px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.479);
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.input-box input:focus {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.479);
+}
+
+.input-box input:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.479);
+    border: none;
+}
+
+.add-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.add-btn:hover {
+    background-color: #c9bcbcaf;
+}
+
+.add-btn i {
+    font-size: 30px;
+    display: grid;
+    place-items: center;
+    padding-top: 2.5px;
+    color: #fff;
+}
+
+.add-btn i:hover {
+    color: green;
+}
+
+.remove-btn {
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    position: absolute;
+    top: 8px;
+    right: 52px;
+    border-radius: 50%;
+}
+
+.remove-btn:hover {
+    background-color: #c9bcbcaf;
+}
+
+.remove-btn i {
+    font-size: 30px;
+    display: grid;
+    place-items: center;
+    padding-top: 2.5px;
+    color: #fff;
+}
+
+.remove-btn i:hover {
+    color: red;
+}
+
+
+/** pending and completed buttons **/
+.pen-com-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttons {
+    background-color: #C7D3C2;
+    /* color: #4C5664; */
+    font-size: 16px;
+    padding: 0px 10px;
+    width: 172px;
+    height: 42px;
+    border: none;
+    border-radius: 4px;
+}
+
+.buttons:hover {
+    background-color: #4C5664;
+    color: #fff;
+}
+
+
+/** task boxes **/
+.task-box {
+    height: auto;
+    margin: 20px 0 20px;
+    padding: 32px 24px;
+    border: none;
+}
+
+.task-box.has-tasks {
+    border: 2px solid rgba(0, 0, 0, 0.479);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border: 2px solid rgb(233, 240, 239);
+    padding: 0 20px;
+    margin: 8px 0;
+}
+
+.task:hover {
+    background-color: rgba(233, 240, 239, 0.603);
+}
+
+.contents {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contents input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+#check-box {
+    width: 20px;
+    height: 20px;
+}
+
+.contents span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#list-num {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.task-name li {
+    font-size: 18px;
+}
+
+
+.task-name li[contenteditable="true"] {
+    outline: none;
+}
+
+.edit-trash-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.edit-btn {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: #0059b3;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #fff;
+    color: #0059b3;
+    box-shadow: 1px 2px 3px #005ab36e;
+}
+
+.edit-btn i {
+    font-size: 22px;
+}
+
+.trash-btn {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: #cc0000;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.trash-btn:hover {
+    background-color: #fff;
+    color: #cc0000;
+    box-shadow: 1px 2px 3px #cc000077;
+}
+
+.trash-btn i {
+    font-size: 22px;
+}

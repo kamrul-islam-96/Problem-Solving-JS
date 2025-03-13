@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="item">
+                price <br>
+                <span id="base-price">300</span> tk
+            </div>
+            <div class="item-value">
+                <p id="notice"></p>
+                <h2>Right now <span id="count">1</span> Items in this Cart</h2>
+                <button onclick="decreaseCount ()">Decrease</button>
+                <button onclick="increaseCount ()">Increase</button>
+            </div>
+            <h2 id="total-price">
+                
+            </h2>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

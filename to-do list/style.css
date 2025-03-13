@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.container {
+    width: 600px;
+    height: 320px;
+    background-color: thistle;
+    margin: 150px auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.row {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 10px;
+    margin: 20px 0 15px;
+}
+
+#input-box {
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.row button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12.5px 20px;
+    border: 0;
+    background-color: tomato;
+    border-radius: 10px;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+ul li span {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border-radius: 50%;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./assets/radio.png);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-color: green;
+}
+
+#list-container {
+    max-height: 220px;  
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+}
+
+#list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
