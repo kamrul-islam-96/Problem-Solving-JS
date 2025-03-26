@@ -9,3 +9,6 @@ while (arr.length > 0) {
 }
 
 console.log(revercedArr);
+
+// Output: [ 'a', 'b', 'c', 'd', 'e' ]
+//         [ 'e', 'd', 'c', 'b', 'a' ]

@@ -1,14 +1,8 @@
-// let arr = ['Tahsin', 'Kamrul', 'Sakib', 'Labib', 'Kamrul'];
+let arr = ['Tahsin', 'Kamrul', 'Sakib', 'Labib', 'Kamrul'];
 
-// arr.splice(4, 1);
+arr.splice(4, 1);
 
-// console.log(arr);
+console.log(arr);
 
-// for (let i = 1; i <= 10; i++) {
-//     console.log('hi');
-// }
 
-while (i <= 5) {
-    console.log('hi');
-    i = i++;
-}
+// Output: [ 'Tahsin', 'Kamrul', 'Sakib', 'Labib' ]
