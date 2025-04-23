@@ -99,6 +99,16 @@ a {
 }
 
 .buttons {
+  width: 100px;
+  height: 25px;
+  border: 2px solid red;
+  text-align: center;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+
+/* .buttons {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -111,7 +121,7 @@ a {
 
 .fa-minus {
   color: green;
-}
+} */
 
 
 /* style rules for label and some buttons */

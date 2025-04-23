@@ -1,4 +1,5 @@
 let shop = document.getElementById('shop');
+let productAdd = document.querySelector('.cartAmount')
 
 let shoppingData = [
     {
@@ -31,68 +32,60 @@ let shoppingData = [
     },
 ]
 
-let basket = [];
+let basket = JSON.parse(localStorage.getItem('cart')) || [];
+
 
 let generateShop = () => {
-    return (shop.innerHTML = shoppingData.map ((x) => {
-        let {id,name,price,desc,img} = x;
+    shop.innerHTML = shoppingData.map((product) => {
         return `
-    <div class="item" id = product-id-${id}>
-            <img src="${img}" alt="shirt" width="220" height="200">
+        <div class="item">
+            <img src="${product.img}" alt="${product.name}" width="220" height="200">
             <div class="details">
-                <h3>${name}</h3>
-                <p>${desc}</p>
+                <h3>${product.name}</h3>
+                <p>${product.desc}</p>
                 <div class="price-quantity">
-                    <h2>$ ${price}</h2>
-                    <div class="buttons">
-                        <i onclick = "decrement('${id}')" class="fa-solid fa-minus"></i>
-                        <div class="quantity" id=${id}>0</div>
-                        <i onclick = "increment('${id}')" class="fa-solid fa-plus"></i>
-                    </div>
+                    <h2>$ ${product.price}</h2>
+                    <button onclick="addToCart('${product.id}')" class="add-to-cart-btn">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
-        </div>    
-    `;
-    }).join(""))
+        </div>`;
+    }).join("");
 };
 
-generateShop ();
 
+window.addToCart = (id) => {
+    let existingItem = basket.find(item => item.id === id);
+    let product = shoppingData.find(p => p.id === id);
+    
 
-let increment = (id) => {
-    let selectedItem = id;
-    let search = basket.find((x) => x.id === selectedItem.id);
-  
-    if (search === undefined) {
-      basket.push({
-        id: selectedItem.id,
-        item: 1,
-      });
-    } else {
-      search.item += 1;
+    if (!existingItem) {
+        basket.push({
+            ...product,
+            quantity: 1 
+        });
+        
+        localStorage.setItem('cart', JSON.stringify(basket));
+        updateCartIcon();
+        generateShop(); 
     }
-  
-    console.log(basket);
-    update(selectedItem.id);
-    localStorage.setItem("data", JSON.stringify(basket));
-  };
-  let decrement = (id) => {
-    let selectedItem = id;
-    let search = basket.find((x) => x.id === selectedItem.id);
-  
-    if (search === undefined) return;
-    else if (search.item === 0) return;
-    else {
-      search.item -= 1;
-    }
-    update(selectedItem.id);
-    basket = basket.filter((x) => x.item !== 0);
-    console.log(basket);
-    localStorage.setItem("data", JSON.stringify(basket));
-  };
+};
 
-  let update = (id) => {
-    let search = basket.find((x) => x.id === id);
-    document.getElementById(id).innerHTML = search.item;
-    calculation();
-  };
+let updateCartIcon = () => {
+    let totalItems = basket.reduce((total, item) => total + item.quantity, 0);
+    productAdd.textContent = totalItems;
+};
+
+generateShop();
+updateCartIcon();
+
+
+
+
+
+
+
+
+
+
